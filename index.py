@@ -81,3 +81,14 @@ def Registrar():
 
     EmailEntry = ttk.Entry(RightFrame, width=30) # Cria um campo de entrada para o email
     EmailEntry.place(x=120, y=55)
+
+    # FUNCAO PARA REGISTRAR NO BANCO DE DADOS
+    def RegistrarNoBanco():
+        nome = NomeEntry.get()
+        email = EmailEntry.get()
+        usuario = UsuarioEntry.get()
+        senha = SenhaEntry.get()
+
+        # Verifica se todos os campos estao preenchidos
+        if nome == "" or email == "" or usuario == "" or senha == "":
+            

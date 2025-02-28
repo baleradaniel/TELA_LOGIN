@@ -33,7 +33,7 @@ class Database:
     
     # Metodo para excluir usuario do banco de dados
     def excluir(self, idusuario):
-        self.cursor.execute("DELETE FROM usuario1 WHERE idusuario = %s", (idusuario)) # Exclui o usuario conforme o id passado
+        self.cursor.execute("DELETE FROM usuario1 WHERE idusuario = %s", (idusuario,)) # Exclui o usuario conforme o id passado
         self.conn.commit() # Confirma o processo
     
     # Metodo para buscar usuario no banco de dados
